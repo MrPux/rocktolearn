@@ -7,25 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>survey</title>
     <link rel="stylesheet" href="card.css">
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
 </head>
 
 <body>
-    <div data-tilt data-tilt-glare data-tilt-max-glare="0.3" class="card">
-        <h2 style="color:white; text-align: center;">question</h2>
-        <br>
-        <button id="option1">a. </button>
-        <br>
-        <button id="option2">b. </button>
-        <br>
-        <button id="option3">c. </button>
-        <br>
-        <button id="option4">d. </button>
-    </div>
+    <header></header>
+    <main>
+        <div data-tilt data-tilt-glare data-tilt-max-glare="0.3" class="card">
+            <h2 style="color:white; text-align: center;">question</h2>
+            <br>
+            <button id="option1" onclick='traverseAnswer("A")'>A. </button>
+            <br>
+            <button id="option2" onclick='traverseAnswer("B")'>B. </button>
+            <br>
+            <button id="option3" onclick='traverseAnswer("C")'>C. </button>
+            <br>
+            <button id="option4" onclick='traverseAnswer("D")'>D. </button>
+            <p id="output">Waiting for you to choose an asnwer...</p>
+        </div>
+    </main>
+    <footer></footer>
+    
 
     <script src="card.js"></script>
-    <py-script src="survey.py"></py-script>
+    <script src="survey.js"></script>
 </body>
 
 </html>

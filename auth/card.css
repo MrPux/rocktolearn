@@ -1,23 +1,26 @@
 *{
-    padding: 0;
-    margin: 0;
+    /* padding: 0; */
+    /* margin: 0; */
     font-family: sans-serif;
 }
-body{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    /* background: url(back.jpg); */
+html, body {
     background-color: black;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* display: flex; */
+    align-items: center; 
+    /* Aligns vertically in the middle */
 }
+
+ /*  */
+
 .card{
+    margin-top: 100px;
+    margin-left: 50px;
     width: 350px;
-    height: 75vh;
+    height: 450px;
     padding: 20px;
     backdrop-filter: blur(20px);
     border: 2px solid #fff;
