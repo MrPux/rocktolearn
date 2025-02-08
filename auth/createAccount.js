@@ -26,7 +26,7 @@ sign_up_button.addEventListener("click", function (event) {
     const email = document.getElementById("sign-up-email").value;
     const password = document.getElementById("sign-up-password").value;
     const confirmPassword = document.getElementById("sign-up-confirm-password").value;
-
+// 
     if (password !== confirmPassword) {
         alert("Passwords do not match!");
         return;
