@@ -37,15 +37,14 @@ sign_up_button.addEventListener("click", function (event) {
         .then((userCredential) => {
             const user = userCredential.user;
 
-            // Create user document in Firestore
-            console.log("Was here");
+            // Create user document in Firestore 
             setDoc(doc(dataBase, "users", user.uid), {
                 name: name,
                 email: user.email,
                 uid: user.uid,
             }).then(() => {
                 // Redirect after successful account creation
-                window.location.href = "/survey/new_user_survey.html";
+                window.location.href = "new_user_survey.html";
             });
         })
         .catch((error) => {
