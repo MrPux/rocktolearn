@@ -5,7 +5,6 @@ import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11
 // Initialize Firebase
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBoLvH8TbKmEErTR1Wg6E76ScIqEdo8qzI",
     authDomain: "rocktolearn-b862d.firebaseapp.com",
     projectId: "rocktolearn-b862d",
     storageBucket: "rocktolearn-b862d.firebasestorage.app",
