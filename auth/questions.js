@@ -1,34 +1,40 @@
-let questions = [
-    {
-        id: "q1",  // Unique ID for question 1
-        text: "What is your ideal concert experience?",
-        options: ["A. Laid-back and intimate show", "B. Spectacle guitar solos", "C. Theatrical performance", "D. Raw and unpolished"]
-    },
-    {
-        id: "q2",  // Unique ID for question 2
-        text: "What’s your favorite type of vocal performance?",
-        options: ["A. Harmonized vocals", "B. High-energy screams", "C. Dramatic, operatic-style", " D. A deep, grungy voice"]
-    },
-    {
-        id: "q3",  // Unique ID for question 3
-        text: "How do you express your creativity?",
-        options: ["A. Exploration and Experimentation", " B. Creating powerful moments", "C. Flair for the dramatic ", " D.  unfiltered emotions, "]
-    },
-    {
-        id: "q4",  // Unique ID for question 4
-        text: "What type of music do you prefer to listen to?",
-        options: ["A. Classic, timeless hits", " B. Heavy powerful sounds", " C. Energetic dynamic rock", "D. Grunge and raw "]
-    },
-    {
-        id: "q5",  // Unique ID for question 5
-        text: "What inspires your mood the most?",
-        options: [" A. Nostalgic tunes", " B .Nature and Freedom,", "C. Empowering message.", "D. Pursuit of authenticity."]
-    }
+const surveyData = [
+    { question: "What's your favorite color?", options: ["Red", "Blue", "Green", "Yellow"] },
+    { question: "What's your preferred type of music?", options: ["Rock", "Classical", "Jazz", "Pop"] },
+    { question: "Which medium do you prefer for art?", options: ["Painting", "Sculpture", "Photography", "Digital"] },
+    { question: "What inspires you the most?", options: ["Nature", "Emotions", "History", "Dreams"] }
 ];
 
-function displayQuestion(index){
-    const question = questions[index];
-    getElement 
+let currentQuestionIndex = 0;
 
+function displayQuestion() {
+    const questionElement = document.getElementById("question");
+    const options = [document.getElementById("option1"), document.getElementById("option2"), document.getElementById("option3"), document.getElementById("option4")];
+    const outputElement = document.getElementById("output");  // Get the output paragraph
 
+    if (currentQuestionIndex >= surveyData.length) {
+        questionElement.textContent = "Survey completed! Thank you!";
+        options.forEach(button => button.style.display = "none");
+        outputElement.textContent = "Survey completed!";
+        return;
+    }
+    
+    const questionData = surveyData[currentQuestionIndex];
+    questionElement.textContent = questionData.question;
+    
+    questionData.options.forEach((option, i) => {
+        options[i].textContent = option;
+        options[i].style.display = "block";
+        options[i].onclick = () => {
+            outputElement.textContent = `You chosed answer: ${option}`; // Update output text
+            nextQuestion();
+        };
+    });
 }
+
+function nextQuestion() {
+    currentQuestionIndex++;
+    displayQuestion();
+}
+
+document.addEventListener("DOMContentLoaded", displayQuestion);
