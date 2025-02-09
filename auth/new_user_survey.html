@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey</title>
+    <link rel="stylesheet" href="card.css">
+
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div data-tilt data-tilt-glare data-Ptilt-max-glare="0.3" class="card">
+            <h2 id="question" style="color:white; text-align: center;">question</h2>
+            <br>
+            <button id="option1" onclick='traverseAnswer("A")'>A. </button>
+            <br>
+            <button id="option2" onclick='traverseAnswer("B")'>B. </button>
+            <br>
+            <button id="option3" onclick='traverseAnswer("C")'>C. </button>
+            <br>
+            <button id="option4" onclick='traverseAnswer("D")'>D. </button>
+            <p id="output">Waiting for you to choose an asnwer...</p>
+        </div>
+    </main>
+    <footer></footer>
+    
+
+    <script src="card.js"></script>
+    <script src="middleMan.js"></script>
+    <script src="questions.js"></script>
+</body>
+
+</html>

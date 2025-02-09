@@ -86,12 +86,16 @@ body {
     
 }
 
+body
+{
+    background-color: rgb(8, 184, 169);;
+}
 
 :root{
     /*Colors*/ 
     --purple-color: rgb(212, 80, 19);
     --dark-color: rgb(134, 97, 97);
-    --primary-color: hwb(28 36% 18%); 
+    --primary-color: rgb(15, 101, 101);
     --secondary-color: #343d9f;
     
 
