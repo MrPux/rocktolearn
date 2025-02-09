@@ -5,12 +5,13 @@ import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11
 // Initialize Firebase
 
 const firebaseConfig = {
+    apiKey: "AIzaSyBoLvH8TbKmEErTR1Wg6E76ScIqEdo8qzI",
     authDomain: "rocktolearn-b862d.firebaseapp.com",
     projectId: "rocktolearn-b862d",
-    storageBucket: "rocktolearn-b862d.firebasestorage.app",
+    storageBucket: "rocktolearn-b862d.appspot.com",  // Fixed URL
     messagingSenderId: "978124436883",
     appId: "1:978124436883:web:a5c7fa9270c7394a2ca466",
-    measurementId: "G-V1HX2MBDPZ"
+    measurementId: "G-V1HX2MBDPZ",
 };
 
 const app = initializeApp(firebaseConfig);
