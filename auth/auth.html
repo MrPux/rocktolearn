@@ -13,48 +13,76 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form id="sign-up-form">
                 <h1>Create Account</h1>
                 <input id="sign-up-name" type="text" placeholder="Name">
                 <input id="sign-up-email" type="email" placeholder="Email">
-                <p style="font-size: small;">password requires more than six characters</p>    
+                <p style="font-size: small;">Password requires more than six characters</p>
                 <input id="sign-up-password" type="password" placeholder="Password">
-                <input id="sign-up-confirm-password" type="password" placeholder="confirm password">
-                <button id="sign-up">Sign Up</button> 
-                <!-- <div class="google-auth">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"><b> use google</b></i></a> 
-                </div> -->
+                <input id="sign-up-confirm-password" type="password" placeholder="Confirm Password">
+                <p id="error-message" style="color: red; display: none;">All fields are required & password must match!</p>
+                <button type="button" onclick="validateAndRedirect()">Sign Up</button>
             </form>
         </div>
+        
         <div class="form-container sign-in">
             <form>
                 <h1>Sign In</h1>
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Password">
-                <a href="#">Forget Your Password?</a>
-                <button>Sign In</button>
-                <!-- <div class="google-auth">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"><b> use google</b></i></a> 
-                </div>  -->
+                <a href="#">Forgot Your Password?</a>
+                <button type="submit">Sign In</button>
             </form>
         </div>
+
         <div class="toggle-container">
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
                     <h1>Welcome Back!</h1>
-                    <p>Enter your personal details to use all of site features</p>
+                    <p>Enter your personal details to use all site features</p>
                     <button class="hidden" id="login">Sign In</button>
                 </div>
                 <div class="toggle-panel toggle-right">
                     <h1>Hello, Friend!</h1>
-                    <p>Register with your personal details to use all of site features</p>
+                    <p>Register with your personal details to use all site features</p>
                     <button class="hidden" id="register">Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="auth.js"></script> 
+    <script>
+        function validateAndRedirect() {
+            let name = document.getElementById("sign-up-name").value.trim();
+            let email = document.getElementById("sign-up-email").value.trim();
+            let password = document.getElementById("sign-up-password").value.trim();
+            let confirmPassword = document.getElementById("sign-up-confirm-password").value.trim();
+            let errorMessage = document.getElementById("error-message");
+
+            if (name === "" || email === "" || password === "" || confirmPassword === "") {
+                errorMessage.textContent = "All fields are required!";
+                errorMessage.style.display = "block";
+                return;
+            }
+
+            if (password.length < 6) {
+                errorMessage.textContent = "Password must be at least 6 characters long!";
+                errorMessage.style.display = "block";
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = "Passwords do not match!";
+                errorMessage.style.display = "block";
+                return;
+            }
+
+            // If all conditions pass, redirect to new_user_survey.html
+            window.location.href = "/auth/new_user_survey.html";
+        }
+    </script>
+
+    <script src="auth.js"></script>
     <script type="module" src="createAccount.js"></script>
 
 </body>

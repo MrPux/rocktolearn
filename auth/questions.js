@@ -7,13 +7,26 @@ const surveyData = [
 
 let currentQuestionIndex = 0;
 
+function getRandomElement(list) {
+    if (!list || list.length === 0) {
+      return undefined; // Return undefined for empty or invalid input
+    }
+    const randomIndex = Math.floor(Math.random() * list.length);
+    return list[randomIndex];
+  }
+  
+  // Example usage:
+  const myArray = ["The Beatles" ,  "Led Zeppelin", "Queen" , " Nirvana"];
+  const randomElement = getRandomElement(myArray);
+  
+
 function displayQuestion() {
     const questionElement = document.getElementById("question");
     const options = [document.getElementById("option1"), document.getElementById("option2"), document.getElementById("option3"), document.getElementById("option4")];
     const outputElement = document.getElementById("output");  // Get the output paragraph
 
     if (currentQuestionIndex >= surveyData.length) {
-        questionElement.textContent = "Survey completed! Thank you!";
+        questionElement.textContent = randomElement;
         options.forEach(button => button.style.display = "none");
         outputElement.textContent = "Survey completed!";
         return;

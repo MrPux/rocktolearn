@@ -1,38 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+    <title>W3.CSS Template</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock to Learn</title>
-    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet"> <!-- Link to Gothic font -->
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        body,
+        h1 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body,
+        html {
+            height: 100%;
+            background-color: black;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Login Section in Upper Left -->
 
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <h2 style="margin-left: 50px; color:white; font-size:50px; font-weight: bold;"><span class="emoji" style="font-size: 70px; margin-left:10px; ">&#x1F3B8; </span>Rocktolearn     
+            <div style="float:right; font-size: 20px; margin-top: 40px; margin-right: 100px;">
+            <a style="margin-right: 20px">HOME</a>
+            <a>ABOUT</a>
+        </div></h2>
+    
 
-    <!-- Title Section -->
-    <header class="header">
-        <nav class="nav_container section-content" > 
-            <a href ="#" class ="nav-logo">
-                <h2 class="logo-text"></h2> 
-                <span class= "emoji">&#x1F3B8; </span> 
-                
- 
-                    <a href="#" class="nav-link">Home</a>
-                 
-                    <a href="#" class="nav-link">Menu</a>
- 
-                    <a href="#" class="nav-link">About</a>
-                 
-                  
-        </nav> 
-        </header>
-        <main>
-            <h2 style="margin-left: 50px; color:white; font-size:50px">Rocktolearn</h2><
-            <br>
-            <br>
-            <a href='auth/auth.html'><h2 style="margin-left: 50px;">Join Us</h2></a>
-        </main>
+    </div>
+    <main>
+        <br>
+        <br>
+        <a href="auth/auth.html">
+            <div class="circle-button">
+                Join Us
+            </div>
+        </a>
+        
+        <style>
+        .circle-button {
+            width: 200px;  /* Adjust size as needed */
+            height: 80px; /* Same as width to make it circular */
+            background-color: rgb(8, 184, 169); /* Change color if needed */
+            border: 3px solid none; /* Border color */
+            color: white; /* Text color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 16px; /* Makes it circular */
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            position: absolute;
+            left: 100px;  /* Adjust position */
+            top: 600px;   /* Adjust position */
+            transition: 0.3s;
+        }
+        
+        .circle-button:hover {
+            background-color: rgb(15, 101, 101); /* Subtle hover effect */
+        }
+        </style>
+        
+    </main>
+
 </body>
+
 </html>

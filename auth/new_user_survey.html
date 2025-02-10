@@ -26,8 +26,18 @@
             <p id="output">Waiting for you to choose an asnwer...</p>
         </div>
     </main>
-    <footer></footer>
-    
+    <br>
+    <footer>
+        <button onclick="refreshPage()" style="margin-left: 200px; width: 80px; height: 30px; background-color: black; color:white">new survey</button>
+
+        <script>
+            function refreshPage() {
+                location.reload(); // Reloads the current page
+            }
+        </script>
+
+    </footer>
+
 
     <script src="card.js"></script>
     <script src="middleMan.js"></script>
