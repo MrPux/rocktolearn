@@ -22,7 +22,7 @@ scene.add(light);
 const geometry = new THREE.SphereGeometry();
 
 //Texture
-const texture = new THREE.TextureLoader().load("https://ewscripps.brightspotcdn.com/1b/b0/ea637db5463886bf93c8465f540c/1528488876.jpg");
+const texture = new THREE.TextureLoader().load("images/earth.jpg");
 
 //Mesh
 const mesh = new THREE.MeshStandardMaterial({map: texture});
