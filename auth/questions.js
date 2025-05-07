@@ -21,14 +21,17 @@ function getRandomElement(list) {
   
 
 function displayQuestion() {
+    const new_survey_button = document.getElementById("new_survey_button");
     const questionElement = document.getElementById("question");
     const options = [document.getElementById("option1"), document.getElementById("option2"), document.getElementById("option3"), document.getElementById("option4")];
     const outputElement = document.getElementById("output");  // Get the output paragraph
 
+    new_survey_button.style.display = "none";
     if (currentQuestionIndex >= surveyData.length) {
         questionElement.textContent = randomElement;
         options.forEach(button => button.style.display = "none");
         outputElement.textContent = "Survey completed!";
+        new_survey_button.style.display = "block";
         return;
     }
     
